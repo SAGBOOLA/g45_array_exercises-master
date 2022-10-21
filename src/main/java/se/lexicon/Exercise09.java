@@ -4,9 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercise09 {
-  public static void main(String[] args) {
-    ex9();
-  }
+  private static int[] array = new int[0];
 
   /**
    * 9. Write a method which will add elements in an array.
@@ -14,18 +12,16 @@ public class Exercise09 {
    * solution to “expand” the array
    */
   public static void ex9() {
-    String [] coolNames = {"Erik", "Steven", "Joseph", "Henrik"};
     Scanner sc = new Scanner(System.in);
-    System.out.println("Add a name");
-    String getName = sc.nextLine();
-    String [] allNames = addMoreNames(coolNames,getName);
-    System.out.println(Arrays.toString(allNames));
-  }
+    System.out.println("Enter a number: ");
 
-  public static String [] addMoreNames (String[] names, String name){
-    String [] moreNames = Arrays.copyOf(names,names.length+1);
-    moreNames[moreNames.length-1] = name;
-    return moreNames;
+    int num = sc.nextInt();
+    int[] newArray = Arrays.copyOf(array , array.length + 1);
+    newArray[newArray.length - 1] = num;
+
+    array = newArray;
+    System.out.println(Arrays.toString(array));
+
   }
 
 }
