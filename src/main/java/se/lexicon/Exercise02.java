@@ -26,7 +26,7 @@ public class Exercise02 {
   }
   public static void ex2(){
     int[] arrays = {3, 15, 5, 17, 73, 24};
-    System.out.println("Index position of the element is: " + indexOf(arrays,17));
+    System.out.println("Index position of the element is: " + indexOf(arrays,10));
   }
 
 
